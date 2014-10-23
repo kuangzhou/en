@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 关于
+title: About
 permalink: /about/
 ---
 This is my English blog
