@@ -20,14 +20,14 @@ layout: page
 
 <div id="post-pagination" class="paginator">
 
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-    <a href="/"><前页</a>
+  {% if paginator.Previous_page %}
+    {% if paginator.Previous_page == 1 %}
+    <a href="/"><Previous</a>
     {% else %}
-    <a href="/page{{paginator.previous_page}}"><前页</a>
+    <a href="/page{{paginator.Previous_page}}"><Previous</a>
     {% endif %}
   {% else %}
-    <span class="previous disabled"><前页</span>
+    <span class="Previous disabled"><Previous</span>
   {% endif %}
 
       {% if paginator.page == 1 %}
@@ -45,9 +45,8 @@ layout: page
     {% endfor %}
 
   {% if paginator.next_page %}
-    <a class="next" href="/page{{paginator.next_page}}">后页></a>
+    <a class="next" href="/page{{paginator.next_page}}">Next></a>
   {% else %}
-    <span class="next disabled" >后页></span>
+    <span class="next disabled" >Next></span>
   {% endif %}
-  (共{{ paginator.total_posts }}篇)
 </div>
