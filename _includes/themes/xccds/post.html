@@ -1,0 +1,44 @@
+<div class="post">
+  <div class="title">
+    <h2>{{ page.title }}</h2>
+    {% if page.date %}
+    <small>{{ page.date | date: "%Y - %m - %d " }} | 
+    {% else %}
+    <small> Year - Month - Day | 
+    {% endif %}
+	{% if page.categories %}
+	<span class="categories">
+	  in categories
+	  {% for cat in page.categories %}
+	  <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+	  {% endfor %}
+	</span>
+	{% endif %}
+	{% if page.tags %}
+	<span class="tags">
+	  tagged with 
+	  {% for tag in page.tags %}
+	  <a href="{{ site.url }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
+	  {% endfor %}
+	</span>
+	{% endif %}
+    </small>
+  </div><!-- END title -->
+			
+  <div class="entry">
+    {{ content }}
+    <div class="clear"></div>
+  </div><!-- END entry -->         
+                
+  <p class="postmetadata">
+    <span class="category">
+      {% for tag in page.tags %}
+      <a href="{{ site.url }}{{ site.JB.tags_path }}#{{ tag }}-ref"" rel="tag">{{ tag }}</a>
+      {% endfor %}
+    </span>
+  </p>
+        
+  
+  {% include comments.md %}
+
+</div><!-- END post -->

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    {% if page.title %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
+    
+    
+    <link rel="stylesheet" id="default-css" href="{{ ASSET_PATH }}/css/style.css" type="text/css" media="all" />
+
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery-ui.custom.min.js"></script>
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/flick/jquery-ui.custom.css" type="text/css" />
+
+    
+   <script src="{{ ASSET_PATH }}/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
+	 <script type="text/javascript">
+	$.fn.tagcloud.defaults = {
+		size: {start: 12, end: 22, unit: 'px'},
+		  color: {start: '#7CCD7C', end: '#CD0000'}
+	};
+
+	$(function () {
+		$('#tag_cloud a').tagcloud();
+	});
+	</script>
+	<style type="text/css">
+        .head-img .tagline { display:none; }
+        .head-img img { width: 950px; border-radius: 8px; }
+	</style>
+	
+	<!-- Highlight support -->
+    <link href="{{ ASSET_PATH }}/css/highlight.css" rel="stylesheet">
+    
+    <!-- MathJax support -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		  displayMath: [ ['$$','$$'] ], 
+          processEscapes: true
+        }
+      });
+    </script>
+	<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+          }
+        });
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+    <script type="text/javascript"
+       src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+    <!-- Google Custom Search -->
+
+   <script>
+  (function() {
+    var cx = '016087059138131795345:6wd7recepes';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+     
+
+   
+   <!-- Slideshow -->
+   <script type="text/javascript" charset="utf-8">/*<![CDATA[*/ 
+    jQuery(document).ready(function() {
+        jQuery(".slideshow").cycle({
+          fx: "fade",
+          timeout: 6000,
+          pager: "#slideshow-nav",
+          speed: 1000,
+          pagerEvent: "click",
+          pauseOnPagerHover: true,
+          cleartypeNoBg: true });
+      });
+   /*]]>*/</script> 
+    
+  </head>
+
+<body>
+  <div class="content-pad">
+
+    <div id="header">
+        <div class="header-inner">
+          <div class="title-wrapper">
+            <h1><a href="{{ HOME_PATH }}">{{ site.title }}</a></h1>
+          </div>
+          
+           <div class="descriptionwrapper">
+              <p class="description"><span>{{ site.tagline }}</span></p>
+           </div>
+           
+        </div>
+        
+      <div class="subnav">
+        <ul class="nav nav-pills">
+        <li><a title="home page" class="" href="/cn">首页</a></li>
+        <li><a title="Menu" class="" href="/cn/archive/">博文</a></li>
+        <li><a title="about" class="" href="/cn/about/">关于</a></li>
+        <li><a title="guestbook" class="" href="/cn/guestbook/">留言版</a></li>
+        <li><a title="categories" class="" href="/cn/categories/">类型</a></li>
+        <li><a title="publication" class="" href="/cn/publication/">著作</a></li>
+        <li><a title="tags" class="" href="/cn/tags/">标签</a></li>
+        <li><a title="links" class="" href="/cn/links/">链接</a></li>
+	    <li><a title="My homepage" class=""  href="/">主页</a></li>
+	    <li><a title="English version" class=""  href="/en/">English</a></li>
+        </ul>
+      </div>
+    
+    </div>
+    
+    <div id="main">		
+	  <div class="columns">	
+        <div class="narrowcolumn singlepage no">
+          {{ content }}
+	    </div><!-- END Narrowcolumn -->
+
+        <div id="sidebar" class="no">
+          <ul>
+            <li id="widget_search" class="widget">
+              <gcse:searchbox-only></gcse:searchbox-only>
+              <div style="clear:both;"></div>
+            </li> 
+            
+            <li id="widget_categories" class="widget">
+              <h2 class="blocktitle"><span>分类目录</span></h2>
+               <div id="tag_cloud">
+               {% for category in site.categories %}
+               <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref" title="{{ category[0] }}" rel="{{ category[1].size }}">{{ category[0] }}&nbsp;</a>
+	{% endfor %}</div>		       
+            </li>
+            
+            
+
+            <li id="linkcat-1" class="widget">
+              <h2 class="blocktitle"><span>链接</span></h2>
+                <ul>
+                  <li><a href="http://yihui.name/">谢益辉</a></li>
+                  <li><a href="http://www.bjt.name/">刘思喆</a></li>
+                </ul>
+            </li>
+            
+            
+          </ul>
+        </div><!-- END sidebar -->
+
+        <div class="clear"></div>
+        
+        <div id="footer">
+          <div class="lt">
+            版权所有 © 2014 KuangZhou | 由 <a href="http://jekyllbootstrap.com/" title="Jekyll Bootstrap" rel="copyright">Jekyll Bootstrap</a> 和 <a href="http://pages.github.com/" title="GitHub Pages" rel="copyright">GitHub Pages</a> 构建
+          </div>
+
+         <div class="rt">主题来自<a href="http://joegaotao.github.io" target="_blank">Tao Gao</a>和<a href="http://yihui.name" 
+				  target="_blank">Yihui Xie</a>
+</div> 
+          
+          <div class="clear"></div>
+        </div><!-- END footer -->
+
+      </div> <!-- END Columns --> 
+    </div><!-- END main -->
+  </div><!-- END content-pad -->
+  
+  <div class="clear"></div>
+    
+</body>
+</html>
