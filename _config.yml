@@ -1,6 +1,8 @@
 markdown: rdiscount
 permalink: /:year/:month/:title/
 url: http://kuangzhou.github.io/en
+title : Big things comes from small beginnings. 
+tagline: Life. Fighting. 
 author: 周旷(KuangZHOU) 
 pygments: true
 
