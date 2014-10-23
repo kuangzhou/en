@@ -1,5 +1,5 @@
 ---
-title: 天道酬勤，宁静致远
+title: From small beginnings comes great things. 
 layout: page
 ---
 
