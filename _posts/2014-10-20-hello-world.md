@@ -16,7 +16,7 @@ example. Interestingly, these two languages not evoked by "Hello World" are most
 can master something new very quickly, but I will insist to learn and believe one day I will be qualified to say 
 why this language is better than others or the opposite.
 
-Great things comes small beginnings. Maybe there is some period that is sure to be wasted by yourself. Do not regret for that. 
+The great thing comes small beginnings. Maybe there is some period that is sure to be wasted by yourself. Do not regret for that. 
 Keep on fighting and be constancy to the purpose, even at the right time  the only thing you know is "Hello World".
 
 
