@@ -11,12 +11,12 @@ comments: yes
 Ordered by names: 
 
 - [Arnaud Martin](http://www.arnaud.martin.free.fr) 
-- [Arthur P. Dempster](http://www.stat.harvard.edu/faculty_page.php?page=dempster.html)
+- [Arthur P. Dempster](http://statistics.fas.harvard.edu/people/arthur-p-dempster)
 - [Didier Dubois](http://www.irit.fr/~Didier.Dubois)
 - [Glenn Shafer](http://www.glennshafer.com)
 - [Jianbo Yang](https://php.portals.mbs.ac.uk/JianBoYang/Profile/tabid/1073/Default.aspx)
 - [Philippe Smets](http://iridia.ulb.ac.be/~psmets)
-- [Prakash P. Shenoy](http://web.ku.edu/~pshenoy)
+- [Prakash P. Shenoy](http://pshenoy.faculty.ku.edu/)
 - [Thierry Denoeux](https://www.hds.utc.fr/~tdenoeux/dokuwiki/doku.php)
 
 ## WebSite
