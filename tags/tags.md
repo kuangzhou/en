@@ -1,6 +1,6 @@
 ---
 layout: page_no_comment
-title: 标签
+title: Labels
 header: Posts By Tags 
 group: no_navigation
 permalink: /tags/

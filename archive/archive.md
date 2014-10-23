@@ -1,6 +1,6 @@
 ---
 layout: page_no_comment
-title : 博文目录 
+title : BlogMenu 
 group: no_navigation
 permalink: /archive/
 ---
