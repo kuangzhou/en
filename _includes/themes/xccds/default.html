@@ -151,7 +151,7 @@
               <h2 class="blocktitle"><span>Categories</span></h2>
                <div id="tag_cloud">
                {% for category in site.categories %}
-               <a href="{{ site.url }}{{ site.JB.categories_path }}#{{ category[0] }}-ref" title="{{ category[0] }}" rel="{{ category[1].size }}">{{ category[0] }}&nbsp;</a>
+               <a href="{{ site.url }}/categories/#{{ category[0] }}" title="{{ category[0] }}" rel="{{ category[1].size }}">{{ category[0] }}&nbsp;</a>
 	{% endfor %}</div>		       
             </li>
             
@@ -184,11 +184,10 @@
         
         <div id="footer">
           <div class="lt">
-            版权所有 © 2014 KuangZhou | 由 <a href="http://jekyllbootstrap.com/" title="Jekyll Bootstrap" rel="copyright">Jekyll Bootstrap</a> 和 <a href="http://pages.github.com/" title="GitHub Pages" rel="copyright">GitHub Pages</a> 构建
+            Copyright © 2014 KuangZhou | Powered by <a href="http://jekyllbootstrap.com/" title="Jekyll Bootstrap" rel="copyright">Jekyll Bootstrap</a> and <a href="http://pages.github.com/" title="GitHub Pages" rel="copyright">GitHub Pages</a> 
           </div>
 
-         <div class="rt">主题来自<a href="http://joegaotao.github.io" target="_blank">Tao Gao</a>和<a href="http://yihui.name" 
-				  target="_blank">Yihui Xie</a>
+         <div class="rt">The theme is from<a href="http://joegaotao.github.io" target="_blank">Tao Gao</a> and <a href="http://yihui.name" target="_blank">Yihui Xie</a>
 </div> 
           
           <div class="clear"></div>
